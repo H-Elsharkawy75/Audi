@@ -22,11 +22,36 @@ namespace Eagles.LMS.Controllers
             return View();
         }
 
+        public ActionResult Price()
+        {
 
+            //return Redirect("/Admission");
+            return View();
+        }
+        public ActionResult Engine()
+        {
 
+            //return Redirect("/Admission");
+            return View();
+        }
+        public ActionResult Equipment()
+        {
 
+            return View();
+        }
+        
+        public ActionResult Colour()
+        {
 
+            return View();
+        }
+        
 
+            public ActionResult Results()
+        {
+
+            return View();
+        }
 
         public ActionResult ChangeLanguage(string SelectedLanguage, string redirect)
         {

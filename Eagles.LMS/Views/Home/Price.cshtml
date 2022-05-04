@@ -1,54 +1,22 @@
 ﻿
-
-
-@using Eagles.LMS.App_GlobalResources
-
 @{
-
-    string host = Request.Url.Host;
-
-    bool en = true;
-
-    if (Request.Cookies["Language"] != null)
-    {
-        en = (Request.Cookies["Language"].Value.ToString() == "en") ? true : false;
-
-    }
-}
-
-
-@using Eagles.LMS.BLL
-@using Eagles.LMS.App_GlobalResources
-
-@{
-    UnitOfWork ctx = new UnitOfWork();
-
-
-
-
-
+    ViewBag.Title = "Price";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 @section EndHeader{
-
+    
     <style>
-        .otherheader .otherhedcont .otheruihead li.Active1 a {
+        .otherheader .otherhedcont .otheruihead li.Active2 a {
             color: #000;
             background: #e7e9ea;
         }
-
-        .otherheader .otherhedcont .otheruihead li.Active1:hover a {
+        .otherheader .otherhedcont .otheruihead li.Active2:hover a {
             color: #000;
         }
     </style>
-}
-
-
-
-
-
-
+    }
 
 <div class="TapsCars" style="">
     <div class="container">
@@ -58,76 +26,17 @@
                 <ul>
                     <li>
                         <div class="ItemSearch">
-                            <span>A3 Hussein</span>
+                            <span>Price $ From 70000</span>
                             <button class="Remove"><i class="bx bx-x"></i></button>
                         </div>
                     </li>
                     <li>
                         <div class="ItemSearch">
-                            <span>A3</span>
+                            <span>Price $ To 260000</span>
                             <button class="Remove"><i class="bx bx-x"></i></button>
                         </div>
                     </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3 Hussein</span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3 </span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3 Hussein</span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3</span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3 </span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3 Hussein</span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3 </span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3</span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3 Hussein</span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ItemSearch">
-                            <span>A3 Hussein</span>
-                            <button class="Remove"><i class="bx bx-x"></i></button>
-                        </div>
-                    </li>
+                    
 
                     <li>
                         <div class="SearchClear">
@@ -140,21 +49,18 @@
 
 
             <div class="AudiSearchCar">
-                <h2>Audi Used Car Search</h2>
+                <h2>Audi Used Cars by Price</h2>
                 <p>
                     Here you can find an extensive range of Audi demonstrator and pre-owned stock, including certified Audi Approved <span>:plus </span>vehicles, and complete an online order.
                 </p>
 
-                <div class="linksBenifits">
-                    <a href="#">Benefits of Audi Approved :plus</a>
-                </div>
                 <div class="linksBenifits">
                     <a href="#">How to order online</a>
                 </div>
             </div>
 
 
-            <div class="shop-single">
+            <div class="shop-single" style="display:none">
                 <div class="product-details">
                     <div class="product-info-tabs">
                         <div class="prod-tabs tabs-box">
@@ -1344,14 +1250,14 @@
     <div class="container">
         <div class="TutelModel">
             <h2>
-                Model Year
+                Price $
             </h2>
         </div>
         <div class="" id="price">
             <div class="middle">
                 <div class="multi-range-slider">
-                    <input type="range" id="input-left" min="2005" max="2022" value="1">
-                    <input type="range" id="input-right" min="2005" max="2022" value="1">
+                    <input type="range" id="input-left" min="0" max="320000" >
+                    <input type="range" id="input-right" min="0" max="320000" >
                     <div class="slider">
                         <div class="track"></div>
                         <div class="range"></div>
@@ -1361,8 +1267,8 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-between mt-2">
-                <div> <span id="amount-left" class="font-weight-bold"></span> </div>
-                <div> <span id="amount-right" class="font-weight-bold"></span> </div>
+                <div> <span class="font-weight-bold"> From</span><span id="amount-left" class="font-weight-bold"></span> </div>
+                <div><span class="font-weight-bold"> To</span> <span id="amount-right" class="font-weight-bold"></span> </div>
             </div>
         </div>
 
@@ -1375,7 +1281,7 @@
 <div class="NextPage">
     <div class="container">
         <div class="linknextPage">
-            <a href="/Home/Price">Price</a>
+            <a href="/Home/Engine">Engin</a>
         </div>
     </div>
 </div>
@@ -1801,7 +1707,7 @@
 
                 thumbLeft.style.left = percent + "%";
                 range.style.left = percent + "%";
-                amountLeft.innerText = parseInt(percent * 1);
+                amountLeft.innerText = parseInt(percent * 3200);
             }
             setLeftValue();
 
@@ -1812,11 +1718,10 @@
 
                 _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
 
-
-
                 var percent = ((_this.value - min) / (max - min)) * 100;
 
-                amountRight.innerText = parseInt(percent * 100);
+                
+                amountRight.innerText = parseInt(percent * 3200);
                 thumbRight.style.right = (100 - percent) + "%";
                 range.style.right = (100 - percent) + "%";
             }
@@ -1853,53 +1758,5 @@
         });
     </script>
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

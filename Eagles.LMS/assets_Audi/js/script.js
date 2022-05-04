@@ -214,26 +214,26 @@
 	// Services Carousel 
 	if ($('.services-carousel').length) {
 		$('.services-carousel').owlCarousel({
-			loop:true,
+			loop:false,
 			margin:0,
 			nav:true,
 			smartSpeed: 500,
 			autoHeight: true,
-			autoplay: true,
+			autoplay: false,
 			autoplayTimeout:5000,
-			navText: [ '<span class="fa fa-long-arrow-alt-left"></span>', '<span class="fa fa-long-arrow-alt-right"></span>' ],
+			navText: ['<span class="bx bx-chevron-left"></span>', '<span class="bx bx-chevron-right"></span>' ],
 			responsive:{
 				0:{
 					items:1
 				},
 				768:{
-					items:2
+					items:1
 				},
 				1024:{
-					items:3
+					items:1
 				},
 				1200:{
-					items:4
+					items:1
 				},
 			}
 		}); 
@@ -266,6 +266,35 @@
 			}
 		}); 
 	}
+
+	// Team Carousel 
+	//if ($('.ReultItem-carousel').length) {
+	//	$('.ReultItem-carousel').owlCarousel({
+	//		loop: true,
+	//		margin: 0,
+	//		nav: true,
+	//		smartSpeed: 500,
+	//		autoHeight: true,
+	//		autoplay: true,
+	//		autoplayTimeout: 5000,
+	//		navText: ['<span class="fa fa-long-arrow-alt-left"></span>', '<span class="fa fa-long-arrow-alt-right"></span>'],
+	//		responsive: {
+	//			0: {
+	//				items: 1
+	//			},
+	//			600: {
+	//				items: 
+	//			},
+	//			1024: {
+	//				items: 1
+	//			},
+	//			1200: {
+	//				items: 1
+	//			},
+	//		}
+	//	});
+	//}
+
 
 	if ($('.projects-slider').length) {
         var swiper = new Swiper('.projects-slider', {
