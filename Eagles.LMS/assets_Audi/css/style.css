@@ -60,9 +60,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:400,500,700|Oswald:200,300,400,500,600,700|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap');
 
+
+@import url('../fonts/calibri-font-family/calibri-regular.ttf');
+@import url('../fonts/calibri-font-family/calibri-bold.ttf');
+
+
 /*
-font-family: 'Rajdhani', sans-serif;
-font-family: 'Oswald', sans-serif;
+font-family: calibiry;
+font-family: calibiry;
 font-family: 'Roboto', sans-serif;
 */
 
@@ -76,6 +81,10 @@ font-family: 'Roboto', sans-serif;
 @import url('jquery.mCustomScrollbar.min.css');
 @import url('jquery.fancybox.min.css');
 
+@font-face {
+	font-family: calibiry;
+	src: url('../fonts/calibri-font-family/calibri-regular.ttf');
+}
 /*** 
 
 ====================================================================
@@ -101,15 +110,15 @@ font-family: 'Roboto', sans-serif;
 ***/
 
 body {
-	
-	font-size:14px;
-	color:#999999;
+	font-size: 14px;
+	color: #999999;
 	line-height: 28px;
-	font-weight:400;
-	background:#fff;
+	font-weight: 400;
+	background: #fff;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Roboto', sans-serif;*/
+	font-family: calibiry;
 }
 
 a{
@@ -131,7 +140,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin:0px;
 	background:none;
 	line-height:1.2em;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: calibiry;
 }
 
 textarea{
@@ -232,7 +241,7 @@ ul,li{
 	-ms-transition:all 0.3s ease;
 	-o-transition:all 0.3s ease;
 	transition:all 0.3s ease;
-	font-family: "Roboto", sans-serif;
+	font-family: calibiry;
 }
 
 .centered{
@@ -492,7 +501,7 @@ position: relative;
 	font-weight: 500;
 	padding-left: 35px;
 	margin-bottom: 15px;
-	font-family: "Archivo", sans-serif;
+	font-family: calibiry;
 }
 
 .list-style-two li:before{
@@ -622,11 +631,13 @@ img{
 	padding: 10px 50px;
 }
 
-.main-header .logo-box{
-	position: relative;
-	float: left;
-	padding: 0px 0;
-}
+	.main-header .logo-box {
+		position: relative;
+		float: none;
+		padding: 0px 0;
+		margin: auto;
+		width: 150px;
+	}
 .main-header .logo-box .logo{
     display: block;
     width: 100px;
@@ -1127,7 +1138,7 @@ img{
 .main-menu{
 	position:relative;
 	float:left;
-	font-family: "Ubuntu", sans-serif;
+	font-family: calibiry;
 }
 
 .main-menu .navbar-header{
@@ -1308,7 +1319,7 @@ img{
 	position: relative;
 	display: block;
 	margin: 0 20px;
-	font-family: "Oswald", sans-serif;
+	font-family: calibiry;
 	overflow: hidden;
 }
 
@@ -1397,16 +1408,16 @@ img{
 	transition-delay: 1000ms;
 }
 
-.sidenav-bar .navigation li > a{
+.sidenav-bar .navigation li > a {
 	position: relative;
 	display: block;
 	line-height: 20px;
 	padding: 12px 20px;
 	font-size: 16px;
-    color: #252525;
+	color: #afafaf;
 	letter-spacing: 0.02em;
 	margin-bottom: 0px;
-    background-color: #fff;
+	background-color: #fff;
 	text-transform: uppercase;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -1425,7 +1436,7 @@ img{
 
 .sidenav-bar .navigation li:hover > a,
 .sidenav-bar .navigation li.current > a{
-	color:#b7912e;	
+	color:#222;	
 }
 
 .sidenav-bar .navigation li.dropdown .dropdown-btn{
@@ -1493,7 +1504,7 @@ img{
 .sidenav-bar .contact-info-box .info-box strong{
 	font-size: 16px;
 	line-height: 24px;
-	font-family: "Oswald", sans-serif;
+	font-family: calibiry;
 	color: #ffffff;
 }
 
@@ -1524,13 +1535,14 @@ img{
 	position: relative;
 	display: block;
 	width: 100%;
-	height: 70px;
+	height: 0px;
 }
 
 .header-style-two{
-	position: fixed;
+	position: relative;
 	background-color: #fff;
 	top: 0;
+	margin-bottom:20px;
 }
 
 .header-style-two .logo-outer{
@@ -1548,21 +1560,25 @@ img{
 	height: auto;
 }
 
-.header-style-two .nav-outer{
-	position: relative;
-	float: right;
+	.header-style-two .nav-outer {
+		position: relative;
+		float: left;
+		width: calc(100% - 160px);
+	}
+.main-header .main-box {
+	display: flex;
+	justify-content: space-between;
 }
-
-.header-style-two .main-box{
-	position:relative;
-	left:0px;
-	top:0px;
-	-webkit-transition:all 300ms ease;
-	-moz-transition:all 300ms ease;
-	-ms-transition:all 300ms ease;
-	-o-transition:all 300ms ease;
-	transition:all 300ms ease;
-}
+	.header-style-two .main-box {
+		position: relative;
+		left: 0px;
+		top: 0px;
+		-webkit-transition: all 300ms ease;
+		-moz-transition: all 300ms ease;
+		-ms-transition: all 300ms ease;
+		-o-transition: all 300ms ease;
+		transition: all 300ms ease;
+	}
 
 .main-menu{
 	position:relative;
@@ -1585,7 +1601,7 @@ img{
 .main-menu .navigation > li{
 	position:relative;
 	float:left;
-	margin-right:50px;
+	margin-right:30px;
 	-webkit-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
@@ -1593,28 +1609,28 @@ img{
 	transition:all 300ms ease;
 }
 
-.main-menu .navigation > li > a{
-	position:relative;
-	display:block;
-	font-size:20px;
-	line-height:30px;
-	font-weight:600;
-	color:#000;
-	padding:15px 0;
-	opacity:1;
-	text-align:center;
-	font-family: "Rajdhani", sans-serif;
-	-webkit-transition:all 300ms ease;
-	-moz-transition:all 300ms ease;
-	-ms-transition:all 300ms ease;
-	-o-transition:all 300ms ease;
-	transition:all 300ms ease;
-}
+	.main-menu .navigation > li > a {
+		position: relative;
+		display: block;
+		font-size: 15px;
+		line-height: 30px;
+		font-weight: 300;
+		color: #afafaf;
+		padding: 15px 0;
+		opacity: 1;
+		text-align: center;
+		font-family: calibiry;
+		-webkit-transition: all 300ms ease;
+		-moz-transition: all 300ms ease;
+		-ms-transition: all 300ms ease;
+		-o-transition: all 300ms ease;
+		transition: all 300ms ease;
+	}
 
-.main-menu .navigation > li.current > a,
-.main-menu .navigation > li:hover > a{
-	color:#b7912e;
-}
+	.main-menu .navigation > li.current > a,
+	.main-menu .navigation > li:hover > a {
+		color: #222;
+	}
 
 .main-menu .navigation > li > ul > li > ul > li.dropdown > a:after{
 	font-family: 'Font Awesome 5 Free';
@@ -1871,7 +1887,7 @@ img{
     line-height: .65em;
     color: #131313;
     font-weight: 700;
-    font-family: "Rajdhani",sans-serif;
+    font-family: calibiry;
     letter-spacing: .2em;
     text-transform: uppercase;
     -webkit-transition: all 2s ease;
@@ -2205,7 +2221,7 @@ img{
 	transform: scaleY(0);
 	transform-origin: top;
 	text-transform: uppercase;
-	font-family: "Oswald", sans-serif;
+	font-family: calibiry;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
@@ -2235,7 +2251,7 @@ img{
 	transform: scaleY(0);
 	transform-origin: top;
 	text-transform: uppercase;
-	font-family: "Oswald", sans-serif;
+	font-family: calibiry;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
@@ -2623,7 +2639,7 @@ color: #222222;
 	font-weight: 600;
 	margin-bottom: 25px;
 	opacity: 0;
-	font-family: "Oswald", sans-serif;
+	font-family: calibiry;
 	text-transform: uppercase;
 	-webkit-transform: translateY(-100px);
 	-moz-transform: translateY(-100px);
@@ -2984,7 +3000,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	color: #ffffff;
 	font-weight: 500;
 	margin-bottom: 25px;
-	font-family: "Oswald", sans-serif;
+	font-family: calibiry;
 	text-transform: uppercase;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
@@ -3074,7 +3090,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	line-height: 1.2em;
 	color: #ffffff; 
 	font-weight: 500;
-	font-family: 'Oswald', sans-serif;
+	font-family: calibiry;
 }
 
 .about-us .content-column .text-box{
@@ -3321,7 +3337,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	color: #ffffff;
 	font-weight: 500;
 	padding-top: 5px;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 }
 
 .about-me .bottom-box .name span{
@@ -3378,7 +3394,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	line-height: 1.4em;
 	color: #ffffff;
 	font-weight: 600;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	margin-bottom: 30px;
 }
 
@@ -3399,7 +3415,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	color: #aaaaaa;
 	font-size: 20px;
 	font-weight: 500;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 }
 
 .about-section .btn-box{
@@ -4620,7 +4636,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	font-size:20px;
 	margin:0 8px 15px;
 	background-color: #252525;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	text-transform: uppercase;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -4913,7 +4929,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	border-left: 3px solid #b7912e;
 	background-color: rgba(255,255,255,.10);
 	margin:0px auto;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	box-shadow: 0 0 20px rgba(0,0,0,0.20);
 	border-radius: 5px 0 0 5px;
 }
@@ -5500,7 +5516,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	font-size: 16px;
 	line-height: 25px;
 	color: #ffffff;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	font-weight: 600;
 }
 
@@ -5780,7 +5796,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
-	font-family: "Oswald", sans-serif;
+	font-family: calibiry;
 	min-width: 50px;
 }
 
@@ -5937,7 +5953,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	color: #b7912e;
 	font-weight: 600;
 	text-transform: uppercase;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	margin-bottom: 10px;
 }
 
@@ -6012,7 +6028,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	font-weight: 600;
 	cursor: pointer;
 	z-index: 8;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	text-transform: uppercase;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -6519,7 +6535,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	max-width: 95%;
 	background-color: rgba(255,255,255,.10);
 	margin:40px auto 40px;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	box-shadow: 0 0 20px rgba(0,0,0,0.20);
 	border-radius: 5px 0 0 5px;
 }
@@ -6557,7 +6573,7 @@ background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(255 255 255 / 0%) 52%, rgb(
 	font-weight:600;
 	margin:0;
 	display: inline-block;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 }
 
 .blog-single .post-share-options .tags{
@@ -7126,7 +7142,7 @@ position: relative;
 .main-footer .footer-bottom .copyright-text a{
 	color: #ffffff;
 	font-weight: 600;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -7152,7 +7168,7 @@ position: relative;
 	position: relative;
 	float: left;
 	margin-left: 10px;
-	font-family: "Oswald", sans-serif;
+	font-family: calibiry;
 }
 
 .main-footer .footer-bottom .footer-nav ul li a{
@@ -7678,7 +7694,7 @@ position: relative;
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	font-family: 'Rubik', sans-serif;
+	font-family: calibiry;
 }
 
 .blog-cat li:last-child a{
@@ -7822,7 +7838,7 @@ position: relative;
 	background-color: #444444;
 	padding: 5px 10px;
 	text-transform: uppercase;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	box-shadow: 0 0 10px rgba(0,0,0,0.40);
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -8028,7 +8044,7 @@ position: relative;
 	line-height: 30px;
 	color: #ffffff;
 	font-weight: 600;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	margin-bottom: 5px;
 }
 
@@ -8109,7 +8125,7 @@ position: relative;
 	color:#ffffff;
 	line-height:1.2em;
 	text-transform:capitalize;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: calibiry;
 	margin-bottom: 4px;
 }
 
@@ -8508,7 +8524,7 @@ position: relative;
 	font-size:28px;
 	font-weight:600;
 	margin-bottom:30px;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: calibiry;
 }
 
 /*Comment Form*/
@@ -8826,7 +8842,7 @@ position: relative;
 	font-size:18px;
 	color:#aaaaaa;
 	font-weight: 700;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 }
 
 .cart-table tbody tr td .quantity-spinner{
@@ -8877,7 +8893,7 @@ position: relative;
 	text-transform:capitalize;
 	background-color:#222222;
 	border: 1px solid transparent;
-	font-family: 'Montserrat', sans-serif;
+	font-family: calibiry;
 	margin-bottom: 10px;
 	-webkit-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
@@ -8920,7 +8936,7 @@ position: relative;
 	text-transform:capitalize;
 	background-color:#222222;
 	border: 1px solid transparent;
-	font-family: 'Montserrat', sans-serif;
+	font-family: calibiry;
 	-webkit-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
@@ -9002,7 +9018,7 @@ position: relative;
 	text-transform:capitalize;
 	background-color:#222222;
 	border: 1px solid transparent;
-	font-family: 'Montserrat', sans-serif;
+	font-family: calibiry;
 	-webkit-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
@@ -9102,7 +9118,7 @@ position: relative;
 	text-transform:capitalize;
 	background-color:#222222;
 	border: 1px solid transparent;
-	font-family: 'Montserrat', sans-serif;
+	font-family: calibiry;
 	-webkit-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
@@ -9430,7 +9446,7 @@ position: relative;
 	color:#aaaaaa;
 	font-weight: 500;
 	font-size:16px;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 }
 
 .order-box ul li span{
@@ -9768,7 +9784,7 @@ position: relative;
 	z-index: 7;
 	box-shadow: 0 0 30px rgba(0,0,0,0.10);
 	background-color: rgba(0,0,0,.20);
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 	margin:0 15px 20px;
 }
 
@@ -9795,7 +9811,7 @@ position: relative;
 	color: #ffffff;
 	font-weight: 500;
 	margin-bottom: 40px;
-	font-family: "Rajdhani", sans-serif;
+	font-family: calibiry;
 }
 
 .coming-soon .emailed-form .form-group{
@@ -10715,7 +10731,7 @@ position: relative;
 
 		.otherheader .otherhedcont .otheruihead li .linkheditem {
 			color: #adadad;
-			font-size: 15px;
+			font-size: 14px;
 			transition: all .4s ease-in-out;
 		}
 .otherheader .otherhedcont .otheruihead li .linkheditem:hover{
@@ -10809,10 +10825,10 @@ position: relative;
 	height: auto;
 	color: #f2f2f2;
 	background-color: #333;
-	font-family: AudiTypeScreen,Verdana,Geneva,sans-serif;
+	font-family: calibiry;
 	font-size: 13px;
 	z-index: 1000000 !important;
-	right: -140px;
+	right: -125px;
 	left: auto;
 	top: 50%;
 	transform: translate(0,-50%);
@@ -10866,7 +10882,7 @@ position: relative;
 				.FixedLinkServ ul li a .name p {
 					margin: 0;
 					color: #fff;
-					font-family: sans-serif;
+					font-family: calibiry;
 				}
 
 
@@ -11077,7 +11093,8 @@ position: relative;
 	}
 .checkbox label {
 	color: #4c4c4c;
-	font-weight: 700;
+	font-weight: 600;
+	font-size:13px;
 }
 	.checkbox label .CountCar {
 		color: #999;
@@ -11168,11 +11185,11 @@ position: relative;
 		}
 
 			.DemonstratorTop .DemonstratorCont .tititileDemo h2 {
-				font-size: 32px;
+				font-size: 25px;
 				line-height: 3.6rem;
 				margin: 0 0 10px;
 				color: #000;
-				font-family: sans-serif;
+				font-family: calibiry;
 			}
 		.DemonstratorTop .DemonstratorCont .SearchFavoret {
 		}
@@ -11214,7 +11231,7 @@ position: relative;
 			.DemonstratorTop .DemonstratorCont .UnderDemons h2 {
 				color: #000;
 				margin-bottom: 0px;
-				font-size: 22px;
+				font-size: 18px;
 				font-weight: 400;
 			}
 				.DemonstratorTop .DemonstratorCont .UnderDemons h2 a {
@@ -11287,14 +11304,14 @@ position: relative;
 }
 	.AudiSearchCar h2 {
 		color: #000;
-		font-size: 42px;
+		font-size: 25px;
 		margin-bottom: 20px;
 		font-weight: 500;
 	}
 	.AudiSearchCar p {
 		color: #000;
-		font-size: 15px;
-		font-family: 'Rajdhani';
+		font-size: 14px;
+		font-family: calibiry;
 	}
 		.AudiSearchCar p span {
 			color: #f50537;
@@ -11312,7 +11329,7 @@ position: relative;
 			height: 55px;
 			line-height: 55px;
 			margin-top: 30px;
-			font-size: 16px;
+			font-size: 15px;
 		}
 
 
@@ -11605,6 +11622,8 @@ input[type=range] {
 		.ModelYears .TutelModel h2 {
 			color: #000;
 			font-weight: 500;
+			font-family: system-ui;
+			font-size: 25px;
 		}
 
 .font-weight-bold {
@@ -11640,7 +11659,7 @@ input[type=range] {
 			height: 55px;
 			line-height: 55px;
 			margin-top: 30px;
-			font-size: 16px;
+			font-size: 14px;
 			text-align: center;
 			margin-right: 0;
 		}
@@ -11661,6 +11680,7 @@ input[type=range] {
 				.ResultSearch .RaeltCont .UperReaselt .Resultcount h2 {
 					color: #000;
 					font-weight: 500;
+					font-size: 25px;
 				}
 			.ResultSearch .RaeltCont .UperReaselt .Resultcount h2 span{
 				margin:0 5px;
@@ -11742,9 +11762,10 @@ input[type=range] {
 				}
 					.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails h1 {
 						color: #000;
-						font-size: 28px;
-						font-weight: 500;
+						font-size:18px;
+						font-weight: 400;
 						margin-bottom: 5px;
+						font-family: inherit;
 					}
 
 					.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails p {
@@ -11752,12 +11773,14 @@ input[type=range] {
 						display: block;
 						margin-bottom: 5px;
 						font-size: 15px;
+						font-family: sans-serif;
 					}
 
 					.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails h2 {
 						color: #000;
-						font-size: 25px;
-						font-weight: 500;
+						font-size: 18px;
+						font-weight: 400;
+						font-family: inherit;
 					}
 
 					.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails .LocationDistination {
@@ -11767,7 +11790,10 @@ input[type=range] {
 							align-items: center;
 							margin-top: 10px;
 						}
+							.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails .LocationDistination .DistnItem:nth-child(2){
 
+							}
+								
 							.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails .LocationDistination .DistnItem .icon {
 								display: block;
 								width: 40px;
@@ -11776,6 +11802,21 @@ input[type=range] {
 								.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails .LocationDistination .DistnItem .icon span {
 									font-size: 29px;
 									color: #000;
+								}
+								.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails .LocationDistination .DistnItem .icon img {
+									padding: 2px;
+									width: 35px;
+									height: 35px;
+									margin-bottom: 10px;
+									display: block;
+								}
+								.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails .LocationDistination .DistnItem:nth-child(2) .icon span {
+									border: 1px solid #222;
+									width: 30px;
+									height: 30px;
+									display: inline-block;
+									text-align: center;
+									line-height: 30px;
 								}
 							.ResultSearch .RaeltCont .underResultSec .ResultItem .ItemDetails .LocationDistination .DistnItem .DitinaDetails {
 							}
@@ -11807,7 +11848,7 @@ input[type=range] {
 							line-height: 45px;
 							border: 1px solid #000;
 							color: #000;
-							font-size: 17px;
+							font-size: 14px;
 						}
 						.ResultSearch .RaeltCont .underResultSec .ResultItem .LinaktElItem ul .DarkBG {
 							background: #000;
@@ -11872,12 +11913,14 @@ input[type=range] {
 		}
 
 			.footerAudi .FooterContnt .upperFootr .FooteruperItem {
-				margin-bottom:40px;
+				margin-bottom:30px;
 			}
 
 				.footerAudi .FooterContnt .upperFootr .FooteruperItem h2 {
 					color: #fff;
-					margin-bottom:30px;
+					margin-bottom: 15px;
+					font-family: sans-serif;
+					font-size: 20px;
 				}
 			.footerAudi .FooterContnt .upperFootr .FooteruperItem ul{
 			}
@@ -11963,7 +12006,7 @@ input[type=range] {
 			.Drivetrain .DrivetrainCobent .Title h2 {
 				color: #000;
 				font-weight: 500;
-				font-size: 30px;
+				font-size: 25px;
 				
 			}
 		.Drivetrain .DrivetrainCobent .drivenationItem {
@@ -12034,3 +12077,232 @@ input[type=range] {
 						font-size: 22px;
 						margin: 5px 0;
 					}
+
+
+
+
+/*start css*/
+/*start our box*/
+/*start login head*/
+.login-head {
+	background-image: url(../images/Audiimg/loginform.png);
+	background-size: cover !important;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 100%;
+	position: relative;
+	height: 450px;
+}
+
+.login-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+	height: 100%;
+	position: absolute;
+	bottom: 0px;
+}
+
+	.enquiry-link, .login-links a {
+		box-shadow: 0px 0px 5px #ddd;
+		font-weight: 400;
+		letter-spacing: 1px;
+		text-transform: capitalize;
+		padding: 8px 16px;
+		border: 1px solid #000;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		color: #222;
+		transition:all .4s ease-in-out;
+		margin-bottom:0;
+	}
+	.login-links .enquiry-link {
+		box-shadow: none !important;
+		border: 0 !important;
+		font-size:18px
+	}
+.login-links .active {
+	box-shadow: 0px 0px 5px #ddd;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	padding: 8px 16px;
+	border: 1px solid #0000;
+	margin-right: 0;
+	margin-bottom: 10px;
+	color: #222;
+	transition: all .4s ease-in-out;
+	margin-bottom: 0;
+	background: #fff;
+}
+.login-links a:hover {
+	border: 1px solid #ddd;
+}
+
+		.login-links a:last-child {
+			border: 1px solid #ddd;
+			color: #777;
+		}
+
+			.login-links a:last-child:hover {
+				border: 1px solid #777;
+				color: black;
+			}
+/*end login head*/
+/*start login-form*/
+.login-form {
+	width: 100%;
+	overflow-x: hidden;
+	background: #fff;
+	max-width: 100%;
+	box-shadow: none;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+.log-in {
+	width: 100%;
+}
+
+.username-filed, .lastname-filed, .email-filed, .mobile-filed, .postcode-filed {
+	position: relative;
+	margin-top: 25px;
+	transition: all .4s ease-in-out;
+}
+
+	.username-filed label, .lastname-filed label, .email-filed label, .mobile-filed label, .postcode-filed label {
+		text-transform: capitalize;
+		font-size: 15px;
+		position: absolute;
+		z-index: 9999;
+		top: 15px;
+		color:#222;
+		transition: all .4s ease-in-out;
+	}
+
+#user-name, #last-name, #mail, #phone, #post {
+	width: 100%;
+	height: 45px;
+	outline: transparent;
+	border: transparent;
+	border-bottom: 1px solid #222;
+	position: relative;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	transition:all .4s ease-in-out;
+}
+
+	#user-name:focus, #last-name:focus, #mail:focus, #phone:focus, #post:focus {
+		border-color: #bb0a30;
+	}
+
+.username-filed span, .lastname-filed span, .email-filed span, .mobile-filed span, .postcode-filed span {
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	font-size: 15px;
+	display: none;
+}
+/*end login-form*/
+/*start enquiery-detailes*/
+.enquiery-detailes {
+	width: 100%;
+	background-color: #e5e5e5;
+	margin-top: 25px;
+	padding: 25px 0px;
+}
+
+	.enquiery-detailes h3 {
+		font-size: 20px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		font-family: inherit;
+		padding-bottom: 15px;
+		color: #222;
+	}
+
+	.enquiery-detailes p {
+		text-transform: capitalize;
+		font-size: 15px;
+		font-weight: 600;
+		padding-top: 10px;
+		padding-left: 50px;
+		color: #222;
+	}
+
+	.enquiery-detailes span {
+		padding-left: 20px;
+		color: #777;
+		font-size: 16px;
+		font-weight: lighter;
+	}
+/*end enquiery detailes*/
+/*start audi-submit*/
+.audi-submit {
+	padding: 25px 0px;
+}
+
+	.audi-submit #audi-check {
+		margin-right: 10px;
+		width: 15px;
+		height: 15px;
+	}
+
+		.audi-submit #audi-check svg {
+			background-color: #777;
+			color: #777;
+		}
+
+	.audi-submit label {
+		text-transform: capitalize;
+		font-size: 15px;
+	}
+
+#form-submit {
+	display: block;
+	position: relative;
+	width: 180px;
+	background-color: #bb0a30;
+	color: #fff;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	padding: 0px 10px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 5px;
+	outline: transparent;
+	border: 1px solid #bb0a30;
+	box-shadow: none;
+	font-size: 18px;
+	font-weight: 100;
+}
+	#form-submit i {
+		float: right;
+		line-height: 50px;
+	}
+	.sub-btn {
+		position: relative;
+		width: 180px;
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+
+	.sub-btn svg {
+		position: absolute;
+		right: 10px;
+		top: 15px;
+		color: #fff;
+	}
+
+.audi-submit p {
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: #838383;
+}
+
+.audi-submit a {
+	text-decoration: underline;
+	font-size: 10px;
+}
+/*end audi-submit*/
+/*end our box*/

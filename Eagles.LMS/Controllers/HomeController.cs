@@ -45,9 +45,13 @@ namespace Eagles.LMS.Controllers
 
             return View();
         }
-        
 
-            public ActionResult Results()
+        public ActionResult Form1()
+        {
+
+            return View();
+        }
+        public ActionResult Results()
         {
 
             return View();

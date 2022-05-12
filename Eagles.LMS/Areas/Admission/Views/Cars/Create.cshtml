@@ -185,9 +185,7 @@
 
                                                         <div class=" col-sm-12 fl-r mt-4">
                                                             <div class="kt-input-icon kt-input-icon--left">
-                                                                <textarea ng-model="property.PropertyName" name="PropertyName{{$index + 1}}" type="text" class="form-control circle" id="{{$index}}">
-</textarea>
-
+                                                                <textarea ng-model="property.PropertyName" name="PropertyName{{$index + 1}}" type="text" class="form-control circle" id="{{$index}}"></textarea>
                                                                 <span class="placeholder">   {{propName[$index]}} </span>
                                                                 <span class="kt-input-icon__icon kt-input-icon__icon--left">
                                                                     <span><i class="la la-barcode"></i></span>
@@ -232,21 +230,16 @@
                                                             <span><i class="la la-barcode"></i></span>
                                                         </span>
                                                     </div>
-
                                                     <input type="hidden" ng-model="property.Id" placeholder="Price">
                                                     @*<input type="text" ng-model="property.PropertyName" name="PropertyName{{$index + 1}}" placeholder="property.PropertyName" id="{{$index}}">*@
-
                                                 </td>
                                                 <td ng-if="property.DataType==1">
-
                                                     {{property.PropertyName}}: <div class="kt-input-icon kt-input-icon--left">
                                                         <input ng-model="property.PropertyNameValue" name="PropertyName{{$index + 1}}" type="number" class="form-control circle" id="{{$index}}">
                                                         <span class="kt-input-icon__icon kt-input-icon__icon--left">
                                                             <span><i class="la la-barcode"></i></span>
                                                         </span>
                                                     </div>
-
-
                                                 </td>
                                                 <td ng-if="property.DataType==2">
                                                     {{property.PropertyName}}: <div class="">
@@ -254,16 +247,12 @@
                                                             <input style="cursor:pointer" type="checkbox" ng-model="property.PropertyNameBoolean" class="form-control circle count" />
                                                         </div>
                                                     </div>
-
                                                     @*<span>{{property.PropertyName}}</span>  <input type="checkbox" ng-model="property.IsRequired" />*@
                                                 </td>
                                                 <td ng-if="property.DataType==3">
-
                                                     <div class="form-group col-sm-12 fl-r">
                                                         <div class="kt-input-icon kt-input-icon--left">
-                                                            <textarea ng-model="property.PropertyNameValue" name="PropertyName{{$index + 1}}" type="text" class="form-control circle" id="{{$index}}">
-                      </textarea>
-
+                                                            <textarea ng-model="property.PropertyNameValue" name="PropertyName{{$index + 1}}" type="text" class="form-control circle" id="{{$index}}"></textarea>
                                                             <span class="placeholder">   {{::propName[$index]}} </span>
                                                             <span class="kt-input-icon__icon kt-input-icon__icon--left">
                                                                 <span><i class="la la-barcode"></i></span>
@@ -271,7 +260,6 @@
                                                         </div>
                                                     </div>
                                                     <input type="hidden" ng-model="property.Id" placeholder="Price">
-
                                                 </td>
                                                 <td ng-if="property.DataType==4">
                                                     {{property.PropertyName}}:  <div class="kt-input-icon kt-input-icon--left">
@@ -280,10 +268,8 @@
                                                             <span><i class="la la-barcode"></i></span>
                                                         </span>
                                                     </div>
-
                                                     <input type="hidden" ng-model="property.Id" placeholder="Price">
                                                     @*<input type="text" ng-model="property.PropertyName" name="PropertyName{{$index + 1}}" placeholder="property.PropertyName" id="{{$index}}">*@
-
                                                 </td>
                                             </tr>
                                         </tbody>
