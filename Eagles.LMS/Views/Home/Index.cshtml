@@ -24,7 +24,7 @@
     UnitOfWork ctx = new UnitOfWork();
 
 
-
+    var _cars = ctx.carManager.GetAll().ToList();
 
 
 }
@@ -58,7 +58,7 @@
                 <ul>
                     <li>
                         <div class="ItemSearch">
-                            <span>A3 </span>
+                            <span> </span>
                             <button class="Remove"><i class="bx bx-x"></i></button>
                         </div>
                     </li>
@@ -169,575 +169,46 @@
                                 <div class="tab" id="prod-details">
 
                                     <div class="AllCars">
-                                        <div class="ItemOfCars ">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="ItemOfCars">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @foreach (var item in _cars)
+                                        {
 
-                                        <div class="ItemOfCars open">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
+                                            <div class="ItemOfCars ">
+                                                <div class="MainCarItem">
                                                     <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
+                                                        <img class="MainImgOne" src="@item.MainImageOne" />
+                                                        <img class="MainImgTwo" src="@item.MainImageTwo" />
                                                     </div>
                                                     <div class="CarTitle">
                                                         <div class="checkbox">
                                                             <label>
                                                                 <input type="checkbox" value="s">
                                                                 <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
+                                                                @item.Categories.Name <span class="CountCar">(1)</span>
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
+                                                <div class="GroupChildCars">
+                                                    <div class="ChildCarItem">
+                                                        <div class="Images">
+                                                            <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
+                                                            <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
+                                                        </div>
+                                                        <div class="CarTitle">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" value="s">
+                                                                    <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
+                                                                    @item.Categories.Name <span class="CountCar">(1)</span>
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="ItemOfCars">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="ItemOfCars ">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="ItemOfCars ">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        }
 
 
 
@@ -750,700 +221,48 @@
                                         <div class="ItemOfCars open">
                                             <div class="MainCarItem">
                                                 <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/111.png" />
+                                                    <img class="MainImgOne" src="@_cars.FirstOrDefault().MainImageOne" />
+                                                    <img class="MainImgTwo" src="@_cars.FirstOrDefault().MainImageTwo" />
                                                 </div>
                                                 <div class="CarTitle">
                                                     <div class="checkbox">
                                                         <label>
                                                             <input type="checkbox" value="s">
                                                             <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
+                                                            @_cars.FirstOrDefault().Categories.Name <span class="CountCar">(1)</span>
                                                         </label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="GroupChildCars">
+                                                @foreach (var item in _cars)
+                                                {
                                                 <div class="ChildCarItem">
                                                     <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j1.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
+                                                        <img class="MainImgOne" src="@item.MainImageOne" />
+                                                        <img class="MainImgTwo" src="@item.MainImageTwo" />
                                                     </div>
                                                     <div class="CarTitle">
                                                         <div class="checkbox">
                                                             <label>
                                                                 <input type="checkbox" value="s">
                                                                 <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                A1 Sportback <span class="CountCar">(1)</span>
+                                                               @item.Types.Name <span class="CountCar">(1)</span>
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j2.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                A3 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j3.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                S3 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j4.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                RS 3 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j5.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Q3 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j6.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                RS Q3 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j7.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                A5 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j8.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                S5 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j9.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                RS 5 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j10.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Q5 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j11.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                SQ5 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/j12.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                A7 Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                }
                                             </div>
                                         </div>
-
-                                        <div class="ItemOfCars">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/5.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/6.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Cabriolet <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="ItemOfCars ">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/7.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/8.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Spyder <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="ItemOfCars">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sedan <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="ItemOfCars ">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="ItemOfCars ">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                    <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            Sportback <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                        <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                Sportback <span class="CountCar">(1)</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
 
                                     </div>
-
                                 </div>
                             </div>
+
+
+
                         </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </div>
     </div>
 </div>
 
@@ -1498,6 +317,7 @@
         <div class="RaeltCont">
             <div class="UperReaselt">
                 <div class="row">
+                    
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="Resultcount">
                             <h2><span>4</span>Result</h2>
@@ -1520,349 +340,96 @@
 
             <div class="underResultSec">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="ResultItem">
-                            <div class="ResutContItem">
-                                <div class="Imagess">
-                                    <div class="services-carousel owl-carousel owl-theme">
-                                        <div class="slide-item">
-                                            <div class="images">
-                                                <img src="~/assets_Audi/images/Audiimg/1.png" />
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-item">
-                                            <div class="images">
-                                                <img src="~/assets_Audi/images/Audiimg/11.png" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="ItemDetails">
-                                    <h1>Audi A1 Sportback</h1>
-                                    <p>35 TFSI S tronic</p>
-                                    <h2>$46,990.00</h2>
-                                    <div class="LocationDistination">
-                                        <div class="DistnItem">
-                                            <div class="icon">
-                                                <span><i class="bx bx-map"></i></span>
-                                            </div>
-                                            <div class="DitinaDetails">
-                                                <p>3 km - Dealer <br /> Audi Centre Cairns</p>
+                    @foreach (var item in _cars)
+                    {
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="ResultItem">
+                                <div class="ResutContItem">
+                                    <div class="Imagess">
+                                        <div class="services-carousel owl-carousel owl-theme">
+                                            <div class="slide-item">
+                                                <div class="images">
+                                                    <img src="@item.MainImageOne" />
+                                                </div>
                                             </div>
 
-                                        </div>
-                                        <div class="DistnItem">
-                                            <div class="icon">
-                                                <img src="~/assets_Audi/images/Audiimg/speedometer.png" />
-                                            </div>
-                                            <div class="DitinaDetails">
-                                                <p>
-                                                    2,803 km
-                                                </p>
+                                            <div class="slide-item">
+                                                <div class="images">
+                                                    <img src="@item.MainImageTwo" />
+                                                </div>
                                             </div>
 
                                         </div>
                                     </div>
-                                    <div class="LinaktElItem">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Explore vehicle</a>
-                                            </li>
-                                            <li>
-                                                <a class="DarkBG" href="#">
-                                                    Order now
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="FavCompair">
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="FavCOmItem">
-                                                    <div class="icon">
-                                                        <span><i class="bx bx-star"></i></span>
-                                                    </div>
-                                                    <div class="favdisc">
-                                                        <p>Add to favourites</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="FavCOmItem">
-                                                    <div class="icon">
-                                                        <span><i class="bx bx-git-compare"></i></span>
-                                                    </div>
-                                                    <div class="favdisc">
-                                                        <p>Add to comparison</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    <div class="ItemDetails">
+                                        <h1>@item.Categories.Name @item.Types.Name</h1>
+                                        <p>35 TFSI S tronic</p>
+                                        <h2>@item.Price$</h2>
+                                        <div class="LocationDistination">
+                                            <div class="DistnItem">
+                                                <div class="icon">
+                                                    <span><i class="bx bx-map"></i></span>
+                                                </div>
+                                                <div class="DitinaDetails">
+                                                    <p>3 km - Dealer <br /> Audi Centre Cairns</p>
+                                                </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="ResultItem">
-                            <div class="ResutContItem">
-                                <div class="Imagess">
-                                    <div class="services-carousel owl-carousel owl-theme">
-                                        <div class="slide-item">
-                                            <div class="images">
-                                                <img src="~/assets_Audi/images/Audiimg/1.png" />
+                                            </div>
+                                            <div class="DistnItem">
+                                                <div class="icon">
+                                                    <img src="~/assets_Audi/images/Audiimg/speedometer.png" />
+                                                </div>
+                                                <div class="DitinaDetails">
+                                                    <p>
+                                                        @item.Power km
+                                                    </p>
+                                                </div>
+
                                             </div>
                                         </div>
-
-                                        <div class="slide-item">
-                                            <div class="images">
-                                                <img src="~/assets_Audi/images/Audiimg/11.png" />
-                                            </div>
+                                        <div class="LinaktElItem">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Explore vehicle</a>
+                                                </li>
+                                                <li>
+                                                    <a class="DarkBG" href="#">
+                                                        Order now
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
-
-                                    </div>
-                                </div>
-                                <div class="ItemDetails">
-                                    <h1>Audi A1 Sportback</h1>
-                                    <p>35 TFSI S tronic</p>
-                                    <h2>$46,990.00</h2>
-                                    <div class="LocationDistination">
-                                        <div class="DistnItem">
-                                            <div class="icon">
-                                                <span><i class="bx bx-map"></i></span>
-                                            </div>
-                                            <div class="DitinaDetails">
-                                                <p>3 km - Dealer <br /> Audi Centre Cairns</p>
-                                            </div>
-
+                                        <div class="FavCompair">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="FavCOmItem">
+                                                        <div class="icon">
+                                                            <span><i class="bx bx-star"></i></span>
+                                                        </div>
+                                                        <div class="favdisc">
+                                                            <p>Add to favourites</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="FavCOmItem">
+                                                        <div class="icon">
+                                                            <span><i class="bx bx-git-compare"></i></span>
+                                                        </div>
+                                                        <div class="favdisc">
+                                                            <p>Add to comparison</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div class="DistnItem">
-                                            <div class="icon">
-                                                <img src="~/assets_Audi/images/Audiimg/speedometer.png" />
-                                            </div>
-                                            <div class="DitinaDetails">
-                                                <p>
-                                                    2,803 km
-                                                </p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="LinaktElItem">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Explore vehicle</a>
-                                            </li>
-                                            <li>
-                                                <a class="DarkBG" href="#">
-                                                    Order now
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="FavCompair">
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="FavCOmItem">
-                                                    <div class="icon">
-                                                        <span><i class="bx bx-star"></i></span>
-                                                    </div>
-                                                    <div class="favdisc">
-                                                        <p>Add to favourites</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="FavCOmItem">
-                                                    <div class="icon">
-                                                        <span><i class="bx bx-git-compare"></i></span>
-                                                    </div>
-                                                    <div class="favdisc">
-                                                        <p>Add to comparison</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    }
 
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="ResultItem">
-                            <div class="ResutContItem">
-                                <div class="Imagess">
-                                    <div class="services-carousel owl-carousel owl-theme">
-                                        <div class="slide-item">
-                                            <div class="images">
-                                                <img src="~/assets_Audi/images/Audiimg/1.png" />
-                                            </div>
-                                        </div>
 
-                                        <div class="slide-item">
-                                            <div class="images">
-                                                <img src="~/assets_Audi/images/Audiimg/11.png" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="ItemDetails">
-                                    <h1>Audi A1 Sportback</h1>
-                                    <p>35 TFSI S tronic</p>
-                                    <h2>$46,990.00</h2>
-                                    <div class="LocationDistination">
-                                        <div class="DistnItem">
-                                            <div class="icon">
-                                                <span><i class="bx bx-map"></i></span>
-                                            </div>
-                                            <div class="DitinaDetails">
-                                                <p>3 km - Dealer <br /> Audi Centre Cairns</p>
-                                            </div>
-
-                                        </div>
-                                        <div class="DistnItem">
-                                            <div class="icon">
-                                                <img src="~/assets_Audi/images/Audiimg/speedometer.png" />
-                                            </div>
-                                            <div class="DitinaDetails">
-                                                <p>
-                                                    2,803 km
-                                                </p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="LinaktElItem">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Explore vehicle</a>
-                                            </li>
-                                            <li>
-                                                <a class="DarkBG" href="#">
-                                                    Order now
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="FavCompair">
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="FavCOmItem">
-                                                    <div class="icon">
-                                                        <span><i class="bx bx-star"></i></span>
-                                                    </div>
-                                                    <div class="favdisc">
-                                                        <p>Add to favourites</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="FavCOmItem">
-                                                    <div class="icon">
-                                                        <span><i class="bx bx-git-compare"></i></span>
-                                                    </div>
-                                                    <div class="favdisc">
-                                                        <p>Add to comparison</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="ResultItem">
-                            <div class="ResutContItem">
-                                <div class="Imagess">
-                                    <div class="services-carousel owl-carousel owl-theme">
-                                        <div class="slide-item">
-                                            <div class="images">
-                                                <img src="~/assets_Audi/images/Audiimg/1.png" />
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-item">
-                                            <div class="images">
-                                                <img src="~/assets_Audi/images/Audiimg/11.png" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="ItemDetails">
-                                    <h1>Audi A1 Sportback</h1>
-                                    <p>35 TFSI S tronic</p>
-                                    <h2>$46,990.00</h2>
-                                    <div class="LocationDistination">
-                                        <div class="DistnItem">
-                                            <div class="icon">
-                                                <span><i class="bx bx-map"></i></span>
-                                            </div>
-                                            <div class="DitinaDetails">
-                                                <p>3 km - Dealer <br /> Audi Centre Cairns</p>
-                                            </div>
-
-                                        </div>
-                                        <div class="DistnItem">
-                                            <div class="icon">
-                                                <img src="~/assets_Audi/images/Audiimg/speedometer.png" />
-                                            </div>
-                                            <div class="DitinaDetails">
-                                                <p>
-                                                    2,803 km
-                                                </p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="LinaktElItem">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Explore vehicle</a>
-                                            </li>
-                                            <li>
-                                                <a class="DarkBG" href="#">
-                                                    Order now
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="FavCompair">
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="FavCOmItem">
-                                                    <div class="icon">
-                                                        <span><i class="bx bx-star"></i></span>
-                                                    </div>
-                                                    <div class="favdisc">
-                                                        <p>Add to favourites</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="FavCOmItem">
-                                                    <div class="icon">
-                                                        <span><i class="bx bx-git-compare"></i></span>
-                                                    </div>
-                                                    <div class="favdisc">
-                                                        <p>Add to comparison</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

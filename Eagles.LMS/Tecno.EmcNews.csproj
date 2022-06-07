@@ -365,6 +365,8 @@
     <Compile Include="Areas\Admission\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admission\Controllers\TypesController.cs" />
     <Compile Include="Areas\Admission\Controllers\UsersController.cs" />
+    <Compile Include="BLL\CarManager.cs" />
+    <Compile Include="BLL\CategoryManager.cs" />
     <Compile Include="BLL\GroupPriviageManager.cs" />
     <Compile Include="BLL\GroupsManager.cs" />
     <Compile Include="BLL\GroupsTreePrivilageDTO.cs" />
@@ -372,6 +374,7 @@
     <Compile Include="BLL\PrivilageManager.cs" />
     <Compile Include="BLL\PrivilageRouteManager.cs" />
     <Compile Include="BLL\Reposatory.cs" />
+    <Compile Include="BLL\TypeManager.cs" />
     <Compile Include="BLL\UnitOfWork.cs" />
     <Compile Include="BLL\UserForLoginReposatory.cs" />
     <Compile Include="BLL\UserManager.cs" />
@@ -395,16 +398,35 @@
     </Compile>
     <Compile Include="Helper\SaveImages.cs" />
     <Compile Include="Helper\SendEmail.cs" />
-    <Compile Include="Migrations\202204282049532_intial.cs" />
-    <Compile Include="Migrations\202204282049532_intial.designer.cs">
-      <DependentUpon>202204282049532_intial.cs</DependentUpon>
+    <Compile Include="Migrations\202206062228350_NewModelset.cs" />
+    <Compile Include="Migrations\202206062228350_NewModelset.designer.cs">
+      <DependentUpon>202206062228350_NewModelset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206070000075_NewModelset2.cs" />
+    <Compile Include="Migrations\202206070000075_NewModelset2.designer.cs">
+      <DependentUpon>202206070000075_NewModelset2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206070027528_NewModelset3.cs" />
+    <Compile Include="Migrations\202206070027528_NewModelset3.designer.cs">
+      <DependentUpon>202206070027528_NewModelset3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountState.cs" />
+    <Compile Include="Models\Assistance systems.cs" />
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Color.cs" />
+    <Compile Include="Models\DriveTrain.cs" />
+    <Compile Include="Models\DynamicFeatures.cs" />
+    <Compile Include="Models\Fuel.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\GroupPriviage.cs" />
+    <Compile Include="Models\Headlights.cs" />
+    <Compile Include="Models\Infotainment.cs" />
     <Compile Include="Models\Privilage.cs" />
     <Compile Include="Models\PrivilageRoute.cs" />
+    <Compile Include="Models\Seats.cs" />
+    <Compile Include="Models\Types.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserTybe.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
@@ -2013,8 +2035,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Global.ar.resx" />
-    <EmbeddedResource Include="Migrations\202204282049532_intial.resx">
-      <DependentUpon>202204282049532_intial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206062228350_NewModelset.resx">
+      <DependentUpon>202206062228350_NewModelset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206070000075_NewModelset2.resx">
+      <DependentUpon>202206070000075_NewModelset2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206070027528_NewModelset3.resx">
+      <DependentUpon>202206070027528_NewModelset3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -2043,9 +2071,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51329</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51881/</IISUrl>
+          <IISUrl>http://localhost:51861/</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost:51881/</IISAppRootUrl>
+          <IISAppRootUrl>http://localhost:51861/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

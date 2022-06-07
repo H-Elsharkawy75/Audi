@@ -17,7 +17,7 @@ namespace Eagles.LMS.Controllers
         // GET: Home
         public ActionResult Index()
         {
-
+            
             //return Redirect("/Admission");
             return View();
         }

@@ -22,9 +22,14 @@ namespace Eagles.LMS.Data
         public DbSet<PrivilageRoute> PrivilageRoutes { get; set; }
         public DbSet<GroupPriviage> GroupPriviages { get; set; }
 
-  
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Types> types { get; set; }
 
- 
+        public DbSet<Car> cars { get; set; }
+
+
+
+
 
 
 

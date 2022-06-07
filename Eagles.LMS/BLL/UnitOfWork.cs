@@ -23,6 +23,10 @@ namespace Eagles.LMS.BLL
 
         public PrivilageManager PrivilageManager { get { return new PrivilageManager(ctx); } }
         public PrivilageRouteManager PrivilageRouteManager { get { return new PrivilageRouteManager(ctx); } }
+        public CategoryManager categoryManager { get { return new CategoryManager(ctx); } }
+        public TypeManager typeManager { get { return new TypeManager(ctx); } }
+        public CarManager carManager { get { return new CarManager(ctx); } }
+        
 
 
 
