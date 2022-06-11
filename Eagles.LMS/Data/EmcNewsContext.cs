@@ -26,6 +26,7 @@ namespace Eagles.LMS.Data
         public DbSet<Types> types { get; set; }
 
         public DbSet<Car> cars { get; set; }
+        public DbSet<Equipment> Equipments { get; set; }
 
 
 

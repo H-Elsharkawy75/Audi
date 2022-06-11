@@ -1,6 +1,4 @@
 ﻿
-
-
 @using Eagles.LMS.App_GlobalResources
 
 @{
@@ -24,8 +22,10 @@
     UnitOfWork ctx = new UnitOfWork();
 
 
-    var _cars = ctx.carManager.GetAll().ToList();
-
+    var _cars = ctx.carManager.GetCarwithEquipments();
+    
+    var _categoreis = ctx.categoryManager.GetAllBind();
+    var _types = ctx.typeManager.GetAllBind();
 
 }
 
@@ -145,11 +145,11 @@
                     Here you can find an extensive range of Audi demonstrator and pre-owned stock, including certified Audi Approved <span>:plus </span>vehicles, and complete an online order.
                 </p>
 
-                <div class="linksBenifits">
+                @*<div class="linksBenifits">
                     <a href="#">Benefits of Audi Approved :plus</a>
-                </div>
+                </div>*@
                 <div class="linksBenifits">
-                    <a href="#">How to order online</a>
+                    <a href="#">Contact US</a>
                 </div>
             </div>
 
@@ -165,16 +165,16 @@
 
                             <div class="tabs-content">
 
-                                <!--Tab-->
+                                <!--Tab/models-->
                                 <div class="tab" id="prod-details">
 
                                     <div class="AllCars">
-
-                                        @foreach (var item in _cars)
-                                        {
-
-                                            <div class="ItemOfCars ">
+                                        <div class="ItemOfCars open">
+                                            @foreach (var item in _categoreis)
+                                            {
                                                 <div class="MainCarItem">
+
+
                                                     <div class="Images">
                                                         <img class="MainImgOne" src="@item.MainImageOne" />
                                                         <img class="MainImgTwo" src="@item.MainImageTwo" />
@@ -184,60 +184,47 @@
                                                             <label>
                                                                 <input type="checkbox" value="s">
                                                                 <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                @item.Categories.Name <span class="CountCar">(1)</span>
+                                                                @item.Name <span class="CountCar">(1)</span>
                                                             </label>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                                 <div class="GroupChildCars">
-                                                    <div class="ChildCarItem">
-                                                        <div class="Images">
-                                                            <img class="MainImgOne" src="~/assets_Audi/images/Audiimg/2021.png" />
-                                                            <img class="MainImgTwo" src="~/assets_Audi/images/Audiimg/2019.png" />
-                                                        </div>
-                                                        <div class="CarTitle">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox" value="s">
-                                                                    <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                    @item.Categories.Name <span class="CountCar">(1)</span>
-                                                                </label>
+                                                    @foreach (var itemtype in _types.Where(s => s.CategoryID == item.ID).ToList())
+                                                    {
+                                                        <div class="ChildCarItem">
+                                                            <div class="Images">
+                                                                <img class="MainImgOne" src="@itemtype.MainImageOne" />
+                                                                <img class="MainImgTwo" src="@itemtype.MainImageTwo" />
+                                                            </div>
+                                                            <div class="CarTitle">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" value="s">
+                                                                        <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
+                                                                        @item.Name @itemtype.Name <span class="CountCar">(1)</span>
+                                                                    </label>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    }
 
                                                 </div>
+                                            }
                                             </div>
-                                        }
-
-
-
 
                                     </div>
-
                                 </div>
                                 <div class="tab active-tab" id="prod-reviews">
                                     <div class="AllCars">
-                                        <div class="ItemOfCars open">
-                                            <div class="MainCarItem">
-                                                <div class="Images">
-                                                    <img class="MainImgOne" src="@_cars.FirstOrDefault().MainImageOne" />
-                                                    <img class="MainImgTwo" src="@_cars.FirstOrDefault().MainImageTwo" />
-                                                </div>
-                                                <div class="CarTitle">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="s">
-                                                            <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                            @_cars.FirstOrDefault().Categories.Name <span class="CountCar">(1)</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="GroupChildCars">
-                                                @foreach (var item in _cars)
-                                                {
-                                                <div class="ChildCarItem">
+                                        @foreach (var item in _types)
+                                        {
+                                            <div class="ItemOfCars open">
+
+                                                <div class="MainCarItem">
+
+
                                                     <div class="Images">
                                                         <img class="MainImgOne" src="@item.MainImageOne" />
                                                         <img class="MainImgTwo" src="@item.MainImageTwo" />
@@ -247,13 +234,36 @@
                                                             <label>
                                                                 <input type="checkbox" value="s">
                                                                 <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                               @item.Types.Name <span class="CountCar">(1)</span>
+                                                                @item.Name <span class="CountCar">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="GroupChildCars">
+                                                @foreach (var itemcategory in _categoreis.Where(s => s.ID == item.CategoryID).ToList())
+                                                {
+                                                <div class="ChildCarItem">
+                                                    <div class="Images">
+                                                        <img class="MainImgOne" src="@itemcategory.MainImageOne" />
+                                                        @*<img class="MainImgTwo" src="@itemcategory.MainImageTwo" />*@
+                                                    </div>
+                                                    <div class="CarTitle">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="s">
+                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
+                                                                @itemcategory.Name @item.Name <span class="CountCar">(1)</span>
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 }
                                             </div>
+                                                
+                                            }
                                         </div>
 
                                     </div>
@@ -347,23 +357,25 @@
                                 <div class="ResutContItem">
                                     <div class="Imagess">
                                         <div class="services-carousel owl-carousel owl-theme">
+                                            @*<div class="slide-item">
+                                                <div class="images">
+                                                    <img src="@item.ShownImage" />
+                                                </div>
+                                            </div>*@
+                                            @foreach (var image in item.ShownImage)
+                                            {
                                             <div class="slide-item">
                                                 <div class="images">
-                                                    <img src="@item.MainImageOne" />
+                                                    <img src="@image.Path" />
                                                 </div>
                                             </div>
-
-                                            <div class="slide-item">
-                                                <div class="images">
-                                                    <img src="@item.MainImageTwo" />
-                                                </div>
-                                            </div>
+                                            }
 
                                         </div>
                                     </div>
                                     <div class="ItemDetails">
                                         <h1>@item.Categories.Name @item.Types.Name</h1>
-                                        <p>35 TFSI S tronic</p>
+                                        <p>@item.Description</p>
                                         <h2>@item.Price$</h2>
                                         <div class="LocationDistination">
                                             <div class="DistnItem">
@@ -371,7 +383,7 @@
                                                     <span><i class="bx bx-map"></i></span>
                                                 </div>
                                                 <div class="DitinaDetails">
-                                                    <p>3 km - Dealer <br /> Audi Centre Cairns</p>
+                                                    <p>@item.NearestLocation km - Dealer <br /> Audi Centre Cairns</p>
                                                 </div>
 
                                             </div>

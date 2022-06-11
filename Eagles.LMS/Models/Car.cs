@@ -24,10 +24,9 @@ namespace Eagles.LMS.Models
         public string MainImageOne { get; set; }
         public string MainImageTwo { get; set; }
 
-        public Assistance_systems assistance_Systems { get; set; }
-        public  Infotainment infotainments { get; set; }
-        public  Headlights Headlights { get; set; }
-        public  Seats Seats { get; set; }
+
+        public string Description { get; set; }
+        public decimal? NearestLocation { get; set; }
 
         public int CategoryId { get; set; }
 
@@ -36,6 +35,19 @@ namespace Eagles.LMS.Models
         public virtual Category Categories { get; set; }
         [ForeignKey(nameof(TypeID))]
         public virtual Types Types { get; set; }
+        public List<Equipment> Equipment { get; set; }
+        public List<ShownImages> ShownImage { get; set; }
+
+
+
+        [NotMapped]
+        public int[] Seats { get; set; }
+        [NotMapped]
+        public int[] Headlights { get; set; }
+        [NotMapped]
+        public int[] infotainments { get; set; }
+        [NotMapped]
+        public int[] assistance_Systems { get; set; }
 
     }
 }

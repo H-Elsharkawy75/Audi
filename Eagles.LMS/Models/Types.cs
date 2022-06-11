@@ -16,7 +16,8 @@ namespace Eagles.LMS.Models
         public int? CategoryID { get; set; }
         //public ICollection<DynamicFeatures> DynamicFeatures { get; set; }
         public  ICollection<Car> Cars { get; set; }
-
+        public string MainImageOne { get; set; }
+        public string MainImageTwo { get; set; }
         [ForeignKey(nameof(CategoryID))]
         public virtual Category Categories { get; set; }
     }

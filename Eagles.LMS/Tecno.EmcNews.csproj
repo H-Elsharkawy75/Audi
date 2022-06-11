@@ -367,6 +367,7 @@
     <Compile Include="Areas\Admission\Controllers\UsersController.cs" />
     <Compile Include="BLL\CarManager.cs" />
     <Compile Include="BLL\CategoryManager.cs" />
+    <Compile Include="BLL\EquipmentManager.cs" />
     <Compile Include="BLL\GroupPriviageManager.cs" />
     <Compile Include="BLL\GroupsManager.cs" />
     <Compile Include="BLL\GroupsTreePrivilageDTO.cs" />
@@ -410,6 +411,26 @@
     <Compile Include="Migrations\202206070027528_NewModelset3.designer.cs">
       <DependentUpon>202206070027528_NewModelset3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206111343114_equipment.cs" />
+    <Compile Include="Migrations\202206111343114_equipment.designer.cs">
+      <DependentUpon>202206111343114_equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206111356473_careditmodel.cs" />
+    <Compile Include="Migrations\202206111356473_careditmodel.designer.cs">
+      <DependentUpon>202206111356473_careditmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206111511501_imagesofmodelsandtypes.cs" />
+    <Compile Include="Migrations\202206111511501_imagesofmodelsandtypes.designer.cs">
+      <DependentUpon>202206111511501_imagesofmodelsandtypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206111608008_imagesshow.cs" />
+    <Compile Include="Migrations\202206111608008_imagesshow.designer.cs">
+      <DependentUpon>202206111608008_imagesshow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206111618425_imagesshown.cs" />
+    <Compile Include="Migrations\202206111618425_imagesshown.designer.cs">
+      <DependentUpon>202206111618425_imagesshown.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountState.cs" />
     <Compile Include="Models\Assistance systems.cs" />
@@ -418,6 +439,7 @@
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\DriveTrain.cs" />
     <Compile Include="Models\DynamicFeatures.cs" />
+    <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Fuel.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\GroupPriviage.cs" />
@@ -426,6 +448,7 @@
     <Compile Include="Models\Privilage.cs" />
     <Compile Include="Models\PrivilageRoute.cs" />
     <Compile Include="Models\Seats.cs" />
+    <Compile Include="Models\ShownImages.cs" />
     <Compile Include="Models\Types.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserTybe.cs" />
@@ -2043,6 +2066,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206070027528_NewModelset3.resx">
       <DependentUpon>202206070027528_NewModelset3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206111343114_equipment.resx">
+      <DependentUpon>202206111343114_equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206111356473_careditmodel.resx">
+      <DependentUpon>202206111356473_careditmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206111511501_imagesofmodelsandtypes.resx">
+      <DependentUpon>202206111511501_imagesofmodelsandtypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206111608008_imagesshow.resx">
+      <DependentUpon>202206111608008_imagesshow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206111618425_imagesshown.resx">
+      <DependentUpon>202206111618425_imagesshown.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
