@@ -169,10 +169,10 @@
                                 <div class="tab" id="prod-details">
 
                                     <div class="AllCars">
-                                        <div class="ItemOfCars open">
+                                        <div class="ItemOfCars" >
                                             @foreach (var item in _categoreis)
                                             {
-                                                <div class="MainCarItem">
+                                                <div class="MainCarItem" id="select_@item.ID" onclick="getitem(`${this.id}`)">
 
 
                                                     <div class="Images">
@@ -182,7 +182,7 @@
                                                     <div class="CarTitle">
                                                         <div class="checkbox">
                                                             <label>
-                                                                <input type="checkbox" value="s">
+                                                                <input class="CarCheck" type="checkbox" id="@item.ID">
                                                                 <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
                                                                 @item.Name <span class="CountCar">(1)</span>
                                                             </label>
@@ -201,7 +201,7 @@
                                                             <div class="CarTitle">
                                                                 <div class="checkbox">
                                                                     <label>
-                                                                        <input type="checkbox" value="s">
+                                                                        <input class="CarCheck" type="checkbox" id="@itemtype.ID">
                                                                         <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
                                                                         @item.Name @itemtype.Name <span class="CountCar">(1)</span>
                                                                     </label>
@@ -220,7 +220,7 @@
                                     <div class="AllCars">
                                         @foreach (var item in _types)
                                         {
-                                            <div class="ItemOfCars open">
+                                            <div class="ItemOfCars" id="select_@item.ID" onclick="getitem(`${this.id}`)">
 
                                                 <div class="MainCarItem">
 
@@ -232,7 +232,7 @@
                                                     <div class="CarTitle">
                                                         <div class="checkbox">
                                                             <label>
-                                                                <input type="checkbox" value="s">
+                                                                <input class="CarCheck" type="checkbox" id="@item.ID">
                                                                 <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
                                                                 @item.Name <span class="CountCar">(1)</span>
                                                             </label>
@@ -241,28 +241,30 @@
 
                                                 </div>
                                             </div>
+                                            foreach (var itemcategory in _categoreis.Where(s => s.ID == item.CategoryID).ToList())
+                                            {
+                                                <div class="GroupChildCars">
 
-                                            <div class="GroupChildCars">
-                                                @foreach (var itemcategory in _categoreis.Where(s => s.ID == item.CategoryID).ToList())
-                                                {
-                                                <div class="ChildCarItem">
-                                                    <div class="Images">
-                                                        <img class="MainImgOne" src="@itemcategory.MainImageOne" />
-                                                        @*<img class="MainImgTwo" src="@itemcategory.MainImageTwo" />*@
-                                                    </div>
-                                                    <div class="CarTitle">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="s">
-                                                                <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
-                                                                @itemcategory.Name @item.Name <span class="CountCar">(1)</span>
-                                                            </label>
+                                                    <div class="ChildCarItem">
+                                                        <div class="Images">
+                                                            <img class="MainImgOne" src="@itemcategory.MainImageOne" />
+                                                            @*<img class="MainImgTwo" src="@itemcategory.MainImageTwo" />*@
+                                                        </div>
+                                                        <div class="CarTitle">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input class="CarCheck" type="checkbox" id="@itemcategory.ID">
+                                                                    <span class="cr"> <i class="cr-icon fas fa-check"></i></span>
+                                                                    @itemcategory.Name @item.Name <span class="CountCar">(1)</span>
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    
+
                                                 </div>
                                                 }
-                                            </div>
-                                                
+
                                             }
                                         </div>
 
@@ -542,6 +544,55 @@
                 thumbRight.classList.remove("active");
             });
         });
+        //$(".ItemOfCars").click(function () {
+        //    debugger;
+        //    var dataId = $(this).data("id");
+        //   var datas= $(this).attr("data-id");
+        //    //dataId.addClass("open");
+        //    //$(".ItemOfCars").addClass("open");
+        //    //var arr = $(".CarCheck:checked").map(function () {
+        //    //    debugger;
+
+        //    //    return $(this).val();
+        //    //});
+        //});
+        function getitem(id) {
+            $(".ItemOfCars").map(function () {
+                $(".ItemOfCars").removeClass("open")
+            });
+
+            document.querySelector(`#${id}`).classList.add("open")
+            //debugger;
+            //$(".MainCarItem").map(function () {
+            //    $(this).parent().removeClass("open")
+            //});
+
+            //document.querySelector(`#${id}`).parentNode.classList.add("open")
+        }
+        //$(".ItemOfCars").click(function () {
+        //    debugger;
+        //    var myEm = $(this).attr('id');
+        //    //alert(myEm);
+        //    $('section[id = ' + myEm + ']').addClass('open');
+        //});
+        var array = [];
+        $(".checkbox").click(function () {
+            debugger;
+            array = $(".CarCheck:checked").map(function () {
+                return $(this).attr("id");
+            });
+            console.log(array);
+            //array = $(".CarCheck:checked").map(function () {
+            //    debugger;
+            //    var checkelement = $(".CarCheck").attr("id");
+            //    console.log(checkelement)
+            //    array.push(checkelement);
+            //    console.log(array);
+            //    return $(this).attr("id");
+            //});
+        });
+
+
     </script>
 }
 
