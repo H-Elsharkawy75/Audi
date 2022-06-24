@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using Eagles.LMS.BLL;
 using Eagles.LMS.DTO;
 using Eagles.LMS.Models;
+using Newtonsoft.Json;
 
 namespace Eagles.LMS.Controllers
 {
@@ -17,11 +20,52 @@ namespace Eagles.LMS.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            
+            Car data = TempData["mydata"] as Car;
+            ViewBag.Allcars = data;
             //return Redirect("/Admission");
             return View();
         }
+        [HttpPost]
+        public JsonResult Carfilter(CarModel carmodel)
+        {
+            UnitOfWork ctx = new UnitOfWork();
+            List<Car> cars = new List<Car>();
+            //Car journalMaster = Serializer.Deserialize<Ac_JournalMaster>(master);
+            //List<Ac_JournalDetails> journalDetails = serilizer.Deserialize<List<Ac_JournalDetails>>(details);
+            if (carmodel.CarType != null && carmodel.CarType.Length > 0)
+            {
+                foreach (var item in carmodel.CarType)
+                {
+                    var itemcar = ctx.carManager.GetAllBind().FirstOrDefault(s => s.TypeID == item);
+                    if (itemcar != null)
+                    {
+                        cars.Add(itemcar);
+                    }
+                }
+            }
+           if (carmodel.CarCategory != null && carmodel.CarCategory.Length > 0)
+                {
+                foreach (var itemcat in carmodel.CarCategory)
+                {
+                    var itemcar = ctx.carManager.GetAllBind().FirstOrDefault(s => s.CategoryId == itemcat);
+                    if (itemcar != null)
+                    {
+                        cars.Add(itemcar);
+                    }
+                }
+            
+            }
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            string CarsList = JsonConvert.SerializeObject(cars, Formatting.None, new JsonSerializerSettings()
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
 
+
+            TempData["mydata"] = CarsList;
+            return Json(CarsList, JsonRequestBehavior.AllowGet);
+
+        }
         public ActionResult Price()
         {
 
@@ -39,7 +83,7 @@ namespace Eagles.LMS.Controllers
 
             return View();
         }
-        
+
         public ActionResult Colour()
         {
 
