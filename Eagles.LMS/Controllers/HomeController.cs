@@ -55,14 +55,20 @@ namespace Eagles.LMS.Controllers
                 }
             
             }
+            var DIstinctcars = cars.ToList().Distinct();
+            if(carmodel.CarCategory==null&&carmodel.CarType==null)
+            {
+                DIstinctcars  = ctx.carManager.GetCarwithEquipments().ToList();
+
+            }
             JavaScriptSerializer jss = new JavaScriptSerializer();
-            string CarsList = JsonConvert.SerializeObject(cars, Formatting.None, new JsonSerializerSettings()
+            string CarsList = JsonConvert.SerializeObject(DIstinctcars, Formatting.None, new JsonSerializerSettings()
             {
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });
 
 
-            TempData["mydata"] = CarsList;
+            TempData["mydata"] = DIstinctcars;
             return Json(CarsList, JsonRequestBehavior.AllowGet);
 
         }
